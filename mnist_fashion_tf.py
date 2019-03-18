@@ -95,6 +95,7 @@ def maxpool2d(x, k=2):
 
 # define weights and biases of filters for each convolution layer
 weights = {
+        # (f_size, f_size, C_prev, C_cur)
     'wc1': tf.get_variable('W0', shape=(3,3,1,32), initializer=tf.contrib.layers.xavier_initializer()), 
     'wc2': tf.get_variable('W1', shape=(3,3,32,64), initializer=tf.contrib.layers.xavier_initializer()), 
     'wc3': tf.get_variable('W2', shape=(3,3,64,128), initializer=tf.contrib.layers.xavier_initializer()), 
